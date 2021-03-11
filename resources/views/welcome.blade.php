@@ -19,7 +19,7 @@
     <div class="container mx-auto">
         <x-alert :color="$color" class="mb-4">
             <x-slot name="title">
-                Titulo 1
+                Titulo 1, o no
             </x-slot>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, veniam cum aspernatur et reiciendis ut voluptas voluptatem itaque, hic maxime tempora quod illo aperiam ullam cumque nulla quo, dolorum unde.
         </x-alert>
