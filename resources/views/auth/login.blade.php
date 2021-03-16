@@ -11,7 +11,7 @@
                 {{ session('status') }}
             </div>
         @endif
-
+                <a href="{{route('register')}}">Registro</a>
         <form method="POST" action="{{ route('login') }}">
             @csrf
 

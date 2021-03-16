@@ -58,4 +58,26 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+
+    //relacion 1 a 1
+    //relaciono usuario con profile a traves de su clave foranea
+    //devuelvo el profile como parte de user.$user->profile
+    public function profile(){
+        //metodo manual relacion
+       // $profile= Profile::where('user_id',$this->id)->first();
+        //return $profile;
+
+        //otro metodo
+        return $this->hasOne('App\Models\Profile');
+    }
+
+    //relacion 1 a n
+    public function posts(){
+        return $this->hasMany('App\Models\Post');
+    }
+
+    public function videos(){
+        return $this->hasMany('App\Models\Video');
+    }
 }
