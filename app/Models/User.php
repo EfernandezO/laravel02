@@ -77,7 +77,19 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Post');
     }
 
+    public function comments(){
+        return $this->hasMany('App\Models\Comment');
+    }
+
     public function videos(){
         return $this->hasMany('App\Models\Video');
+    }
+    //relacion n a n
+    public function roles(){
+        return $this->belongsToMany('App\Models\Role');
+    }
+     //relacion 1:1 polimorfica
+     public function image(){
+        return $this->MorphOne('App\Models\Image', 'imageable');
     }
 }
